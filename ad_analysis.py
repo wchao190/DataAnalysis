@@ -24,7 +24,6 @@ dt.fillna({"平均停留时间":round(dt["平均停留时间"].mean(),4)},inplac
 result = dt.corr().round(4) #计算相关性
 dt = dt.drop(["平均停留时间"],axis=1) #删除相关性高的其中一列
 # print(dt)
-# pd.DataFrame(result).to_excel(r"C:\Users\wuc\Desktop\ad.xlsx")
 
 # 对数据标准化：使用minmax_sacler方法
 scaler_dt = dt.iloc[:,1:7]
